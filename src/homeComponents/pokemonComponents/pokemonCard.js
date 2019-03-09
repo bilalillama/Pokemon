@@ -22,10 +22,10 @@ class PokemonCard extends Component{
 
   render(){
     return(
-      <div className="card container col-3 pokemon-card">
+      <div className="card container col-3 col-md-2 pokemon-card">
         <img src={this.state.imageUrl} alt="https://img.icons8.com/metro/26/000000/recurring-appointment.png" className="card-img-top" />
         <div className="card-body">
-          <h4>{this.state.name.charAt(0).toUpperCase()+this.state.name.slice(1)}</h4>
+          <span>{this.state.name.charAt(0).toUpperCase()+this.state.name.slice(1)}</span>
         </div>
       </div>
     );
