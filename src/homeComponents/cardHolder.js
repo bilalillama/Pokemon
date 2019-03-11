@@ -29,7 +29,7 @@ class CardHolder extends Component{
   johtoClick(){
     this.setState({
       region: 'johto',
-      start: 152,
+      start: 151,
       end: 251
     });
   }
@@ -40,22 +40,42 @@ class CardHolder extends Component{
       end: 386
     });
   }
+  sinnohClick(){
+    this.setState({
+      region: 'sinnoh',
+      start: 386,
+      end: 494
+    });
+  }
+  unovaClick(){
+    this.setState({
+      region: 'unova',
+      start: 494,
+      end: 649
+    });
+  }
 
   render(){
     const start = this.state.start;
     const end = this.state.end;
 
     return(
-      <div className="row Body">
-        <div className="col-2">
-          <div className="container-fluid col-6">
-            <h4>Region</h4>
+      <div className="col">
+        <div className="row">
+          <div className="container-fluid">
+            <h4>Regions</h4>
             <button className="btn btn-link" onClick={this.kantoClick.bind(this)}>Kanto</button>
+            <span>|</span>
             <button className="btn btn-link" onClick={this.johtoClick.bind(this)}>Johto</button>
+            <span>|</span>
             <button className="btn btn-link" onClick={this.hoennClick.bind(this)}>Hoenn</button>
+            <span>|</span>
+            <button className="btn btn-link" onClick={this.sinnohClick.bind(this)}>Sinnoh</button>
+            <span>|</span>
+            <button className="btn btn-link" onClick={this.unovaClick.bind(this)}>Unova</button>
           </div>
         </div>
-        <div className="col-9">
+        <div className="col-9 container">
           {this.state.pokemon ? (
             <div className="row">
               {this.state.pokemon.slice(start, end).map(pokemon => (

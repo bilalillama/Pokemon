@@ -9,6 +9,9 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar/>
+        <div style={{margin:'20px'}}>
+          <h3 className=""> Pokemon each region has to offer </h3>
+        </div>
         <CardHolder/>
       </div>
     );

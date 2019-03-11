@@ -11,8 +11,8 @@ class PokemonCard extends Component{
 
   componentDidMount(){
     const { name } = this.props;
-    const url = "https://img.pokemondb.net/sprites/x-y/normal/.png";
-    const imgUrl = url.slice(0, 45) + this.props.name + url.slice(45);
+    const url = "https://img.pokemondb.net/sprites/black-white/normal/.png";
+    const imgUrl = url.slice(0, 53) + this.props.name + url.slice(53);
 
     this.setState({
       name,
@@ -22,8 +22,8 @@ class PokemonCard extends Component{
 
   render(){
     return(
-      <div className="card container col-3 col-md-2 pokemon-card">
-        <img src={this.state.imageUrl} alt="https://img.icons8.com/metro/26/000000/recurring-appointment.png" className="card-img-top" />
+      <div className="card container col-6 col-md-2 pokemon-card">
+        <img src={this.state.imageUrl} alt="https://img.icons8.com/metro/26/000000/recurring-appointment.png" className="card-img-top"/>
         <div className="card-body">
           <span>{this.state.name.charAt(0).toUpperCase()+this.state.name.slice(1)}</span>
         </div>

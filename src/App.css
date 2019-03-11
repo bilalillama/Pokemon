@@ -2,8 +2,28 @@
   text-align: center;
 }
 
-.Body {
-  margin-top: 20px;
+.header {
+  overflow: visible;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1
+}
+
+.headerDrop{
+  overflow: auto;
+}
+
+.seperate{
+  margin: 5px
+}
+
+a{
+  color: white
+}
+a:hover{
+  color: white;
 }
 
 .pokemon-card {
